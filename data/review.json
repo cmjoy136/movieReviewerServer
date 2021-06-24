@@ -1,0 +1,18 @@
+[    {
+    "critic": "true",
+    "headline": "good movie",
+    "text": "blah blah blah movei quotes",
+    "postDate": "1624504603203",
+    "recommend": "true",
+    "movie": "movie id",
+    "user": "userID" 
+},
+{
+    "critic": "true",
+    "headline": "good movie",
+    "text": "blah blah blah movei quotes",
+    "recommend": "true",
+    "movie": "60d4d49f2b81d1746fb36d4d",
+    "user": "60d4e444ba81a181345c173d" 
+}
+]

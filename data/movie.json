@@ -1,0 +1,16 @@
+[
+    {
+        "title": "testMovie",
+        "tmdbID": "1234",
+        "overview": "test test test",
+        "posterPath": "poster url",
+        "releaseDate": "today"
+    },
+    {
+        "title": "testMovie",
+        "tmdbID": "1234",
+        "overview": "test test test",
+        "posterPath": "poster url",
+        "releaseDate": "today"
+    }
+]

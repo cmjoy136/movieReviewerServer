@@ -9,7 +9,7 @@ router.get('/test/reviews', (req,res)=>{
 
 //get reviews of movie GET
 // need movie id
-router.get('/reviews', (req,res) => {
+router.get('/', (req,res) => {
     Review.find()
     .then(reviews => res.json(reviews))
     .catch(err => res.status(404).json({ noreviewsfound: 'no reviews found'}))
@@ -17,7 +17,7 @@ router.get('/reviews', (req,res) => {
 
 //get review GET
 //review id
-router.get('/reviews/:id', (req, res) => {
+router.get('/:id', (req, res) => {
     Review.findById(req.params.id)
     .then(review => res.json(review))
     .catch(err => res.status(404).json({err}))
@@ -25,7 +25,7 @@ router.get('/reviews/:id', (req, res) => {
 
 // create review POST
 // need movie id
-router.post('/reviews', (req,res)=>{
+router.post('/', (req,res)=>{
 if(req.body){
     let review = new Review(req.body)
     review.save()
@@ -35,6 +35,15 @@ if(req.body){
 })
 
 //edit review PUT/PATCH
+router.patch('/:id',  async (req,res)=> {
+    Review.findByIdAndUpdate({id:req.params.id},{"text": req.body.text}, async(err, result) => {
+        if(err){
+            res.send(err)
+        } else{
+            res.send(result)
+        }
+    })
+})
 
 //delete review DELETE
 
